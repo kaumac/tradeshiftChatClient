@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kaumac/tradeshiftChatClient/issues"
   },
-  "homepage": "https://github.com/kaumac/tradeshiftChatClient#readme"
+  "homepage": "https://github.com/kaumac/tradeshiftChatClient#readme",
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
 }

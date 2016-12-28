@@ -1,0 +1,19 @@
+{
+  "name": "tradeshift_chat_client",
+  "version": "1.0.0",
+  "description": "Client application for Tradeshift Training challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaumac/tradeshiftChatClient.git"
+  },
+  "author": "Kaue Miyauti Machado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaumac/tradeshiftChatClient/issues"
+  },
+  "homepage": "https://github.com/kaumac/tradeshiftChatClient#readme"
+}

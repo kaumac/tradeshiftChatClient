@@ -10,11 +10,13 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
-  loaders: [
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loaders: ["babel-loader"],
-    }
-  ]
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ["babel-loader"],
+      }
+    ]
+  }
 }

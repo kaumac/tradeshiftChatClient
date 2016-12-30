@@ -19,6 +19,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: ["babel-loader"],
+      },
+      {
+        test: /\.html$/,
+        loader: "file?name=[name].[ext]",
       }
     ]
   }

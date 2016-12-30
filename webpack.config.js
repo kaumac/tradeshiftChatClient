@@ -2,17 +2,15 @@ var webpack = require('webpack');
 
 module.exports = {
   context: __dirname + "/app",
+  devtool: "cheap-module-source-map",
   entry: {
-    app: ["./app.js"],
-    html: ["./index.html"],
+    javascript: "./app.js",
+    html: "./index.html",
   },
   output: {
     filename: 'app.js',
     path: __dirname + '/dist'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   module: {
     loaders: [
       {

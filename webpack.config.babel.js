@@ -34,6 +34,9 @@ module.exports = {
       }
     ]
   },
+  eslint: {
+    configFile: './.eslintrc'
+  },
   sassLoader: {
     includePaths: [path.resolve(__dirname, "./app/scss")]
   }

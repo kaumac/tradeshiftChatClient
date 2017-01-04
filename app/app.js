@@ -22,4 +22,4 @@ let messagesMock = [
   }
 ]
 
-ReactDOM.render(<MessageList messages= { messagesMock } />, appRootElement);
+ReactDOM.render(<MessageList messages={messagesMock} />, appRootElement);

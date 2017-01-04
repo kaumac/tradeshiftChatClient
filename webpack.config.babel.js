@@ -1,3 +1,4 @@
+import path from 'path';
 const webpack = require('webpack');
 
 module.exports = {
@@ -32,5 +33,8 @@ module.exports = {
         loaders: ["style", "css?sourceMap", "sass?sourceMap"]
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./app/scss")]
   }
 }

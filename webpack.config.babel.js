@@ -1,8 +1,8 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   context: __dirname + "/app",
-  devtool: "cheap-module-source-map",
+  devtool: "cheap-module-eval-source-map",
   entry: {
     javascript: "./app.js",
     html: "./index.html",
@@ -21,6 +21,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "file?name=[name].[ext]",
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"]
       }
     ]
   }

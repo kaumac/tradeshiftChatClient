@@ -1,5 +1,5 @@
 import React from "react";
-import Message from "../components/message/Message";
+import Message from "../../components/message/Message.jsx";
 
 export default class MessageList extends React.Component{
   render() {

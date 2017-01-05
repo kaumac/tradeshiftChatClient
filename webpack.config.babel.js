@@ -8,6 +8,12 @@ module.exports = {
     javascript: "./app.jsx",
     html: "./index.html",
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+    root: [
+      path.resolve('./app')
+    ],
+  },
   output: {
     filename: 'app.js',
     path: __dirname + '/dist'

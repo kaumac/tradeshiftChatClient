@@ -5,7 +5,7 @@ module.exports = {
   context: __dirname + "/app",
   devtool: "cheap-module-eval-source-map",
   entry: {
-    javascript: "./app.js",
+    javascript: "./app.jsx",
     html: "./index.html",
   },
   output: {
@@ -15,14 +15,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
-        loaders: ["babel-loader"],
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: ["eslint-loader"],
+        loaders: ["babel-loader", "eslint-loader"],
       },
       {
         test: /\.html$/,

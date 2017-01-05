@@ -1,5 +1,6 @@
 import React from 'react';
-import MessageList from "../message_list/MessageList.jsx";
+import MessageList from 'containers/MessageList';
+import ChatForm from 'components/ChatForm';
 
 const messagesMock = [
   {
@@ -23,8 +24,8 @@ export default class Chat extends React.Component {
   render() {
     return(
       <div className='chat-wrapper'>
-        odisajfajsoifs
         <MessageList messages={messagesMock} />
+        <ChatForm/>
       </div>
     );
   }

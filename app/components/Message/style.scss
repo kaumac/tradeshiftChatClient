@@ -1,0 +1,26 @@
+@import "variables/colors";
+
+$triangleHeight: 1.2;
+
+.message {
+  position: relative;
+  padding: 2rem;
+  background: #FFF;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.05);
+  color: #888;
+
+  &::after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;  
+    border-top: #{$triangleHeight}rem solid #FFF;
+    display: block;
+    z-index: 10;
+    right: 1rem;
+    bottom: -#{$triangleHeight}rem;
+    position: absolute;
+  }
+}

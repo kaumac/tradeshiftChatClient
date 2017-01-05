@@ -1,6 +1,7 @@
 import React from 'react';
 import MessageList from 'containers/MessageList';
 import ChatForm from 'components/ChatForm';
+require('./style.scss');
 
 const messagesMock = [
   {

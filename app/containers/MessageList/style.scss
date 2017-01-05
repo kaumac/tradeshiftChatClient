@@ -1,0 +1,14 @@
+.message-list {
+  background: #FAFAFA;
+
+  .message {
+    margin: 1.4rem 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.chat-form {
+  background: #EEE;
+  display: flex;
+  flex-direction: column;
+
+  .chat-form-name {
+    flex-direction: row;
+    margin: 1rem 1rem 0;
+    border: 1px solid #AAA;
+    padding: 0.5rem;
+  }
+
+  .chat-form-message {
+    flex-direction: row;
+    margin: 1rem 1rem 0;
+    border: 1px solid #AAA;
+    padding: 0.5rem;
+    line-height: 1rem;
+    height: 3rem;
+  }
+
+  .chat-form-submit {
+    background: #4CAF50;
+    color: #FFF;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    margin: 1rem;
+    font-weight: 100;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background: #43A047;
+    }
+  }
+}

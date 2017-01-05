@@ -1,0 +1,14 @@
+.chat-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  .message-list {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .chat-form {
+    width: 20rem;
+  }
+}

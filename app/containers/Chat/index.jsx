@@ -22,11 +22,15 @@ const messagesMock = [
 ];
 
 export default class Chat extends React.Component {
+  submitNewMessage(messageAuthor, messageText) {
+    console.log(messageAuthor, messageText);
+  }
+
   render() {
     return(
       <div className='chat-wrapper'>
         <MessageList messages={messagesMock} />
-        <ChatForm/>
+        <ChatForm submitHandler={this.submitNewMessage.bind(this)} />
       </div>
     );
   }

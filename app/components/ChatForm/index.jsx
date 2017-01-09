@@ -1,28 +1,21 @@
 import React from 'react';
 require('./style.scss');
 
-export default class ChatForm extends React.Component {
+const ChatForm = ({ submitHandler }) => {
+  var author, message;
 
-  updateFormState(key, event) {
-    let updatedStateObject = {};
-    updatedStateObject[node] = event.target.value;
-    this.setState(updatedStateObject);
-  }
-
-  submitMessage(e) {
+  function submitMessage(e) {
     e.preventDefault();
-    const author = this.state.author;
-    const message = this.state.message;
-    this.props.submitHandler(this.state.author, this.state.message);
+    submitHandler(author.value, message.value);
   }
 
-  render() {
-    return (
-      <form className="chat-form" onSubmit={this.submitMessage.bind(this)}>
-        <input type="text" className="chat-form-name" placeholder="Type your name" onChange={this.updateFormState.bind(this, 'author')} />
-        <textarea className="chat-form-message" placeholder="Type your message" onChange={this.updateFormState.bind(this, 'message')} />
-        <button className="chat-form-submit" type="submit">Send message</button>
-      </form>
-    );
-  }
+  return (
+    <form className="chat-form" onSubmit={submitMessage.bind(this)}>
+      <input type="text" className="chat-form-name" placeholder="Type your name" ref={(input) => { author = input; }} />
+      <textarea className="chat-form-message" placeholder="Type your message" ref={(input) => { message = input; }} />
+      <button className="chat-form-submit" type="submit">Send message</button>
+    </form>
+  );
 }
+
+export default ChatForm;

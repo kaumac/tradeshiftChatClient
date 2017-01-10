@@ -1,37 +1,24 @@
 import React from 'react';
-import MessageList from 'containers/MessageList';
+import { connect } from 'react-redux';
+import { addMessage } from 'actions';
+import MessageListContainer from 'containers/MessageListContainer';
 import ChatForm from 'components/ChatForm';
 require('./style.scss');
 
-const Chat = () => {
-  const messagesMock = [
-    {
-      author: 'Kaue',
-      date: 'random date',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, voluptates.',
-    },
-    {
-      author: 'Someone',
-      date: 'random date c',
-      text: 'Lorem ipsum dolor sit amet.',
-    },
-    {
-      author: 'Random dude',
-      date: 'random date 2',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos consequatur accusamus deleniti!',
-    },
-  ];
+let Chat = ({ dispatch }) => {
 
   function submitNewMessage(messageAuthor, messageText) {
-    console.log(messageAuthor, messageText);
+    dispatch(addMessage(messageAuthor, messageText));
   }
 
   return(
     <div className='chat-wrapper'>
-      <MessageList messages={messagesMock} />
+      <MessageListContainer />
       <ChatForm submitHandler={submitNewMessage.bind(this)} />
     </div>
   )
 }
+
+Chat = connect()(Chat);
 
 export default Chat;

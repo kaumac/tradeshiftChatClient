@@ -4,10 +4,10 @@ require('./style.scss');
 const Message = ({ author, text }) => (
   <div className="message">
     <div>
-      { author }>
+      <strong>{ author }</strong>
     </div>
     <div>
-      { text }>
+      { text }
     </div>
   </div>
 )

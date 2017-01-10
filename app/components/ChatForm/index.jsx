@@ -1,12 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addMessage } from 'actions';
+
 require('./style.scss');
 
-const ChatForm = ({ submitHandler }) => {
+let ChatForm = ({ dispatch }) => {
   var author, message;
 
   function submitMessage(e) {
     e.preventDefault();
-    submitHandler(author.value, message.value);
+    // submitHandler(author.value, message.value);
+    dispatch(addMessage(author.value, message.value))
   }
 
   return (
@@ -17,5 +21,7 @@ const ChatForm = ({ submitHandler }) => {
     </form>
   );
 }
+
+ChatForm = connect()(ChatForm);
 
 export default ChatForm;
